@@ -33,8 +33,8 @@ Kaggle コンペ用の初期セットアップとして、`AGENTS.md`、`docs/ov
    - Evaluation
    - Timeline
 5. Kaggle の data page を見て、少なくとも以下を集め、`docs/data.md` にまとめる。
-   - ファイル一覧
-   - わかる範囲で各ファイルの中身の概要
+   - data page に書かれているファイル一覧
+   - data page の説明文からわかる範囲で各ファイルの中身の概要
    - target や提出に関係する列やファイル
    - simulator / SDK の有無
 
@@ -45,8 +45,9 @@ Kaggle コンペ用の初期セットアップとして、`AGENTS.md`、`docs/ov
 - Data の詳細は `docs/data.md` に寄せ、`docs/overview.md` はコンペ全体の要約に留める。
 - 推測で埋めず、確認できない項目は `TBD` と書く。
 - Kaggle competition URL が無いまま作業を進めない。
+- データを勝手にダウンロードしない。`kaggle competitions download` や類似操作は、この skill の処理に含めない。
 - `docs/overview.md` は `Description`、`Evaluation`、`Timeline`、`Links` を基本にする。
-- `docs/data.md` では、まずファイル一覧を書き、可能なら各ファイルの役割や中身を一行で添える。
+- `docs/data.md` では、data page の説明文から読み取れる範囲で、まずファイル一覧を書き、可能なら各ファイルの役割や中身を一行で添える。
 - `docs/data.md` の見出しは data page の実態に合わせて増減してよい。
 - `AGENTS.md` にはコンペ名が入った先頭文、`Goal`、`Links` を残し、何のコンペかと `Competition` / `Overview` / `Data` / `Code` / `Discussion` をすぐ参照できる状態にする。
 - 既存ファイルの細かい更新方針はこの skill に持たせず、その場の Codex が判断する。
