@@ -23,16 +23,16 @@ Kaggle コンペをローカルと Kaggle Notebook の両方で回しやすく�
 ひな形としてコピーして使う:
 
 ```bash
-cp -R ~/kaggle/kaggle-template ~/kaggle/<new-project-name>
+rsync -a --exclude '.git' ~/kaggle/kaggle-template/ ~/kaggle/<new-project-name>/
 cd ~/kaggle/<new-project-name>
 ```
 
 コピー後にやること:
 
 ```bash
-# skillsを使ってsetupをする
+# skills を使って setup をする
 
-$kaggle-setup　{competition_url} 
+$kaggle-setup <competition_url>
 ```
 
 ## 使うコマンド
