@@ -1,10 +1,16 @@
 # AGENTS.md
 
-## Competition
+このディレクトリは Kaggle の `{{competition_name}}` コンペの作業ディレクトリです。
 
-- Name: `{{competition_name}}`
-- URL: `{{competition_url}}`
 - Goal: `{{competition_goal}}`
+
+## Links
+
+- Competition: `{{competition_url}}`
+- Overview page: `{{overview_url}}`
+- Data page: `{{data_url}}`
+- Code page: `{{code_url}}`
+- Discussion: `{{discussion_url}}`
 
 ## First Step
 
@@ -19,6 +25,7 @@
 
 - まずコンペ概要を理解してから実装に入る
 - コンペ固有の要点は `docs/overview.md` にまとめる
+- データの要点は `docs/data.md` にまとめる
 - データは基本的に `data/` 配下へ置く
 - 提出ファイルや中間生成物は `output/` 配下へ置く
 - Kaggle に push する Notebook は `kernel-metadata.json` と同じディレクトリに置く

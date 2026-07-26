@@ -1,0 +1,7 @@
+interface:
+  display_name: "Kaggle Setup"
+  short_description: "Kaggle URL から初期ドキュメントを埋める"
+  default_prompt: "Use $kaggle-setup to create AGENTS.md, docs/overview.md, and docs/data.md from this Kaggle competition URL."
+
+policy:
+  allow_implicit_invocation: true
