@@ -90,6 +90,27 @@ unzip data/<downloaded-file>.zip -d data/
 
 ローカル PC に GPU がなくても、Kaggle 側の GPU セッションで実行できます。
 
+## Kaggle Notebook のセッション制限メモ
+
+2026-07-26 時点で把握しておきたい点:
+
+- GPU 利用枠は週次 quota 制です。
+- Kaggle の公式 docs では、GPU は `週 30 時間、または需要とリソース状況に応じてそれ以上` と案内されています。
+- interactive session は、操作しないまま放置すると `60 分` の idle timeout で切れます。
+- Kaggle の competition page では、Notebook 実行時間の上限として `CPU/GPU は 12 時間`、`TPU は 9 時間` と書かれていることがあります。
+
+運用上の注意:
+
+- VS Code から接続していても、元の Kaggle Notebook session が切れると接続は使えなくなります。
+- GPU を使わないときは accelerator を切るか session を止めるほうが quota の無駄が少ないです。
+- ブラウザを閉じる前に session を明示的に stop すると、最大で 60 分ぶんの無駄な消費を避けやすいです。
+- 長い学習は interactive 接続前提にせず、`kaggle kernels push` で batch 実行するほうが安定します。
+
+確認先:
+
+- GPU quota や idle timeout は Kaggle docs を見る
+- 実行時間上限は参加中 competition の page / rules / evaluation notes も確認する
+
 ## メモ
 
 - この README は `kaggle` CLI と `kaggle.json` の準備が終わっている前提です。
@@ -103,3 +124,4 @@ unzip data/<downloaded-file>.zip -d data/
 
 - [〖Kaggle API〗 VSCode で Kaggle する](https://zenn.dev/yuto_mo/articles/5c5311a83892b2)
 - [Kaggle の Notebook 環境を VS Code (Cursor) で触りたい](https://zenn.dev/prgckwb/articles/kaggle-vscode-link)
+- [Kaggle docs: Efficient GPU Usage Tips](https://www.kaggle.com/docs/efficient-gpu-usage)
