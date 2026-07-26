@@ -1,30 +1,25 @@
 # AGENTS.md
 
-このディレクトリは Kaggle コンペ開始時のテンプレートとして使う。
+## Competition
 
-## 目的
+- Name: `{{competition_name}}`
+- URL: `{{competition_url}}`
+- Goal: `{{competition_goal}}`
 
-- Kaggle CLI の操作を毎回調べ直さない
-- Notebook の pull / push / submit 手順をすぐ参照できる
-- ローカル作業と Kaggle GPU 作業を切り替えやすくする
+## First Step
 
-## 作業ルール
+作業を始める前に、まず以下を確認すること。
 
-- まず `README.md` を見て、CLI 操作と接続手順を確認する
+1. `docs/overview.md` を読んでコンペ概要を理解する
+2. competition page を見て、目的・評価指標・提出形式・期限を確認する
+3. `README.md` を見て、必要な Kaggle CLI コマンドと VS Code 接続手順を確認する
+4. `data/` の中身を確認して、どのファイルから見るべきか整理する
+
+## Working Rules
+
+- まずコンペ概要を理解してから実装に入る
+- コンペ固有の要点は `docs/overview.md` にまとめる
 - データは基本的に `data/` 配下へ置く
+- 提出ファイルや中間生成物は `output/` 配下へ置く
 - Kaggle に push する Notebook は `kernel-metadata.json` と同じディレクトリに置く
 - API キーや個人設定はリポジトリに commit しない
-
-## 最初にやること
-
-1. Kaggle CLI が入っているか確認する
-2. `kaggle.json` または `KAGGLE_CONFIG_DIR` を設定する
-3. 対象コンペのデータを `data/` に落とす
-4. 必要なら Notebook を pull してローカルで編集する
-
-## 将来の拡張候補
-
-- `notebooks/` を作る
-- `src/` を作る
-- `Makefile` か `justfile` で定番コマンドをまとめる
-- `kernel-metadata.json` の雛形を置く

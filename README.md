@@ -30,8 +30,7 @@ cd ~/kaggle/<new-project-name>
 コピー後にやること:
 
 ```bash
-# 必要なら git 初期化
-git init
+# まず AGENTS.md のコンペ名・リンク・目的を書く
 
 # 対象コンペのデータ取得
 kaggle competitions download -c <competition-name> -p data/
