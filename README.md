@@ -30,9 +30,9 @@ cd ~/kaggle/<new-project-name>
 コピー後にやること:
 
 ```bash
-# まず Kaggle のコンペ URL を用意する
+# skillsを使ってsetupをする
 
-# $kaggle-setup を叩いて AGENTS.md, docs/overview.md, docs/data.md を埋める
+$kaggle-setup　{competition_url} 
 ```
 
 ## 使うコマンド
